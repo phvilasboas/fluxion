@@ -4,7 +4,7 @@
 O Fluxion é uma ferramenta de auditoria de segurança e pesquisa em engenharia social. É um remake de linset por vk496 com (esperançosamente) menos bugs e mais funcionalidade. O script tenta recuperar a chave WPA/WPA2 de um ponto de acesso de destino por meio de um ataque de engenharia social (phishing). É compatível com a última versão do Kali (rolling). A configuração dos ataques do Fluxion é principalmente manual, mas o modo automático experimental lida com alguns dos parâmetros de configuração dos ataques. Leia o [FAQ] (https://github.com/phvilasboas/fluxion/wiki/FAQ) antes de solicitar problemas.
 
 ## Instalação
-Leia [aqui](https://github.com/phvilasboas/fluxion/wiki/Generate-ssh-keys)antes de você fazer os seguintes passos.
+Leia [aqui](https://github.com/phvilasboas/fluxion/wiki/Generate-ssh-keys) antes de você fazer os seguintes passos.
 <br>
 **Download da Última Versão**
 ```
@@ -76,4 +76,4 @@ Um sistema operacional baseado em Linux. Nós recomendamos Kali Linux 2 ou Kali 
 
 ## Links
 **Fluxion website:** https://phvilasboas.github.io/fluxion/ <br>
-**Facebook:** https:/facebook.com/golinuxoficial <br>
+**Facebook:** https://facebook.com/golinuxoficial <br>
