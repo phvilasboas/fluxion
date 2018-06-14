@@ -1,32 +1,30 @@
 ![Fuxion logo](https://github.com/FluxionNetwork/fluxion/raw/master/logos/logo.jpg)
 
-# Fluxion is the future of MITM WPA attacks
-Fluxion is a security auditing and social-engineering research tool. It is a remake of linset by vk496 with (hopefully) less bugs and more functionality. The script attempts to retrieve the WPA/WPA2 key from a target access point by means of a social engineering (phishing) attack. It's compatible with the latest release of Kali (rolling). Fluxion's attacks' setup is mostly manual, but experimental auto-mode handles some of the attacks' setup parameters. Read the [FAQ](https://github.com/FluxionNetwork/fluxion/wiki/FAQ) before requesting issues.
+# Fluxion é o futuro dos ataques MITM WPA
+O Fluxion é uma ferramenta de auditoria de segurança e pesquisa em engenharia social. É um remake de linset por vk496 com (esperançosamente) menos bugs e mais funcionalidade. O script tenta recuperar a chave WPA/WPA2 de um ponto de acesso de destino por meio de um ataque de engenharia social (phishing). É compatível com a última versão do Kali (rolling). A configuração dos ataques do Fluxion é principalmente manual, mas o modo automático experimental lida com alguns dos parâmetros de configuração dos ataques. Leia o [FAQ] (https://github.com/phvilasboas/fluxion/wiki/FAQ) antes de solicitar problemas.
 
-If you need quick help, fluxion is also avaible on gitter. You can talk with us on [Gitter](https://gitter.im/FluxionNetwork/Lobby) or on [Discord](https://discord.gg/G43gptk).
-## Installation
-Read [here](https://github.com/FluxionNetwork/fluxion/wiki/Generate-ssh-keys) before you do the following steps.
+## Instalação
+Leia [aqui](https://github.com/phvilasboas/fluxion/wiki/Generate-ssh-keys)antes de você fazer os seguintes passos.
 <br>
-**Download the latest revision**
+**Download da Última Versão**
 ```
-git clone --recursive git@github.com:FluxionNetwork/fluxion.git 
+git clone --recursive git@github.com:phvilasboas/fluxion.git 
 ```
-**Switch to tool's directory**
+**Mudar para o diretório da ferramenta**
 ```
 cd fluxion 
 ```
-**Run fluxion (missing dependencies will be auto-installed)**
+**Execute o fluxion (as dependências ausentes serão instaladas automaticamente)**
 ```
 ./fluxion.sh
 ```
 
-**Fluxion is also available in arch** 
+**Fluxion também está disponível no arch Linux** 
 ```
 cd bin/arch
 makepkg
 ```
-
-or using the blackarch repo
+ou usando o repositório blackarch
 ```
 pacman -S fluxion
 ```
@@ -35,31 +33,28 @@ pacman -S fluxion
 Fluxion gets weekly updates with new features, improvements, and bugfixes.
 Be sure to check out the [changelog here](https://github.com/FluxionNetwork/fluxion/commits/master).
 
-## :octocat: How to contribute
-All contributions are welcome! Code, documentation, graphics, or even design suggestions are welcome; use GitHub to its fullest. Submit pull requests, contribute tutorials or other wiki content -- whatever you have to offer, it'll be appreciated but please follow the [style guide](https://github.com/FluxionNetwork/fluxion/wiki/Code-style-guide).
+## :Como contribuir
+Todas as contribuições são bem vindas! Código, documentação, gráficos ou mesmo sugestões de design são bem-vindos; use o GitHub ao máximo. Envie pedidos pull, contribua com tutoriais ou outro conteúdo wiki - o que quer que você tenha a oferecer, será bem-vindo, mas siga o [style guide] (https://github.com/phvilasboas/fluxion/wiki/Code-style- guia).
 
-## :book: How it works
-* Scan for a target wireless network.
-* Launch the `Handshake Snooper` attack.
-* Capture a handshake (necessary for password verification).
-* Launch `Captive Portal` attack.
-* Spawns a rogue (fake) AP, imitating the original access point.
-* Spawns a DNS server, redirecting all requests to the attacker's host running the captive portal.
-* Spawns a web server, serving the captive portal which prompts users for their WPA/WPA2 key.
-* Spawns a jammer, deauthenticating all clients from original AP and lureing them to the rogue AP.
-* All authentication attempts at the captive portal are checked against the handshake file captured earlier.
-* The attack will automatically terminate once a correct key has been submitted.
-* The key will be logged and clients will be allowed to reconnect to the target access point.
+## :Livro: Como funciona
+* Procure uma rede sem fio alvo.
+* Inicie o ataque `Handshake Snooper`.
+* Capture um aperto de mão (necessário para verificação de senha).
+* Lançamento do ataque `Captive Portal`.
+* Gere um AP falso (falso), imitando o ponto de acesso original.
+* Gere um servidor DNS, redirecionando todas as solicitações para o host do invasor executando o portal cativo.
+* Gere um servidor web, servindo o portal cativo, que solicita aos usuários sua chave WPA / WPA2.
+* Gere um jammer, autenticando todos os clientes do AP original e atraindo-os para o AP não autorizado.
+* Todas as tentativas de autenticação no portal cativo são verificadas no arquivo de handshake capturado anteriormente.
+* O ataque terminará automaticamente assim que uma chave correta for enviada.
+* A chave será registrada e os clientes poderão se reconectar ao ponto de acesso de destino.
 
-* For a guide to the `Captive Portal` attack, read the [Captive Portal attack guide](https://github.com/FluxionNetwork/fluxion/wiki/Captive-Portal-Attack)
+* Para um guia do ataque `Captive Portal`, leia o [Guia de ataque do Captive Portal](https://github.com/FluxionNetwork/fluxion/wiki/Captive-Portal-Attack)
 
-## :heavy_exclamation_mark: Requirements
+## :heavy_exclamation_mark: Requerimentos
 
-A Linux-based operating system. We recommend Kali Linux 2 or Kali rolling. Kali 2 & rolling support the latest aircrack-ng versions. An external wifi card is recommended.
+Um sistema operacional baseado em Linux. Nós recomendamos Kali Linux 2 ou Kali rolling. O Kali 2 & rolling suporta as versões mais recentes do aircrack-ng. Recomenda-se uma placa wifi externa.
 
-## Related work
-
-For development I use vim and tmux. Here are my [dotfiles](https://github.com/deltaxflux/takumi/)
 ## :octocat: Credits
 1. l3op - contributor
 2. dlinkproto - contributor
@@ -70,18 +65,15 @@ For development I use vim and tmux. Here are my [dotfiles](https://github.com/de
 7. Ons Ali @wallpaper
 8. PappleTec @sites
 9. MPX4132 - Fluxion V3
+10. phvilasboas- Fluxion BR
 
-## Disclaimer
-* Authors do not own the logos under the `/attacks/Captive Portal/sites/` directory. Copyright Disclaimer Under Section 107 of the Copyright Act 1976, allowance is made for "fair use" for purposes such as criticism, comment, news reporting, teaching, scholarship, and research.
+* O uso do Fluxion para atacar infraestruturas sem consentimento mútuo prévio pode ser considerado uma atividade ilegal e é altamente desencorajado por seus autores / desenvolvedores. É de responsabilidade do usuário final obedecer todas as leis locais, estaduais e federais aplicáveis. Os autores não assumem nenhuma responsabilidade e não são responsáveis ​​por qualquer uso indevido ou dano causado por este programa.
 
-* The usage of Fluxion for attacking infrastructures without prior mutual consent could be considered an illegal activity, and is highly discouraged by its authors/developers. It is the end user's responsibility to obey all applicable local, state and federal laws. Authors assume no liability and are not responsible for any misuse or damage caused by this program.
+## Nota
+* Cuidado com os sites que fingem estar relacionados com o Projeto Fluxion. Estes podem estar entregando malware.
 
-## Note
-* Beware of sites pretending to be related with the Fluxion Project. These may be delivering malware.
-
-* Fluxion **DOES NOT WORK** on Linux Subsystem For Windows 10, because the subsystem doesn't allow access to network interfaces. Any Issue regarding the same would be **Closed Immediately**
+* O Fluxion **NÃO FUNCIONA** no Subsistema Linux Para o Windows 10, porque o subsistema não permite acesso a interfaces de rede. Qualquer problema relacionado ao mesmo seria **Fechado imediatamente**
 
 ## Links
-**Fluxion website:** https://fluxionnetwork.github.io/fluxion/ <br>
-**Discord:** https://discordapp.com/invite/G43gptk <br>
-**Gitter:** https://gitter.im/FluxionNetwork/Lobby <br>
+**Fluxion website:** https://phvilasboas.github.io/fluxion/ <br>
+**Facebook:** https:/facebook.com/golinuxoficial <br>
