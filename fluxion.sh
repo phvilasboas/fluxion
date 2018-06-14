@@ -202,7 +202,7 @@ readonly HashOutputDevice="$FLUXIONOutputDevice"
 # =================== < Default Language > =================== #
 # ============================================================ #
 # Set by default in case fluxion is aborted before setting one.
-source "$FLUXIONPath/language/en.sh"
+source "$FLUXIONPath/language/pt-br.sh"
 
 # ============================================================ #
 # ================== < Startup & Shutdown > ================== #
@@ -404,7 +404,7 @@ fluxion_conditional_bail() {
     fluxion_handle_exit
     return 1
   fi
-  echo "Press any key to continue execution..."
+  echo "Pressione uma tecla para continuar..."
   read bullshit
 }
 
@@ -1772,7 +1772,7 @@ fluxion_prep_attack() {
 
   # Load attack and its corresponding language file.
   # Load english by default to overwrite globals that ARE defined.
-  source "$path/language/en.sh"
+  source "$path/language/pt-br.sh"
   if [ "$FluxionLanguage" != "en" ]; then
     source "$path/language/$FluxionLanguage.sh"
   fi
